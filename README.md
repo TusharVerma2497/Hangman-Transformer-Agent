@@ -30,18 +30,17 @@ Instead of treating Hangman as a static classification task, we approach it as a
 
 ## 📊 Results
 
-The AI agent achieves best compared to both heuristic and learned baselines for allowed incorrect guesses >= 5:
+The AI agent achieves best compared to both heuristic and learned baselines for allowed incorrect guesses < 6:
 
-| Agent              | Win Rate | Params | Guess History Used | Pretrained |
-|-------------------|----------|--------|---------------------|------------|
-| Random Agent       | 0.4%     | NA     | ❌                  | ❌         |
-| Frequency-Informed | 5.3%     | NA     | ❌                  | ❌         |
-| CANINE (Google)    | 54.5%    | ~121M  | ❌                  | ✅         |
-| **Transformer (Ours)** | **55.4%** | **~1.2M**  | ✅ (via decoder)     | ❌         |
+| Agent               | Win Rate | Params     | Weight Updates | Guess History Used | Pretrained |
+|--------------------|----------|------------|----------------|---------------------|------------|
+| Random Agent        | 0.4%     | NA         | NA             | ❌                  | ❌         |
+| Frequency-Informed  | 5.3%     | NA         | NA             | ❌                  | ❌         |
+| CANINE (Google)     | 54.5%    | ~121M      | ~5.3M          | ❌                  | ✅         |
+| **Transformer (Ours)** | **55.4%** | **~1.2M**  | **~2.4M**      | ✅ (via decoder)     | ❌         |
 
-- Particularly effective for words of medium length (6–12 characters).
-- Outperforms models with significantly larger parameter counts.
-
+- Weight Updates = Total batches seen during training.
+- ❌ in "Guess History Used" also means output probabilities are hard masked with the previous guesses to avoid duplicate guesses. 
 ---
 
 ## 🎮 Animation of Win Distribution
