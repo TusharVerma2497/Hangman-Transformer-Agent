@@ -46,7 +46,4 @@ The AI agent achieves best compared to both heuristic and learned baselines for 
 
 ## 🎮 Animation of Win Distribution
 
-<p align="center">
-  <img src="hangman_win_distribution_animation.webp" alt="Result Image" />
-</p>
-
+<img src="hangman_win_distribution_animation.webp" alt="Result Image" style="display:block; margin:auto;"/>
