@@ -34,8 +34,8 @@ The AI agent achieves best compared to both heuristic and learned baselines for 
 
 | Agent               | Win Rate | Params     | Weight Updates | Guess History Used | Pretrained |
 |--------------------|----------|------------|----------------|---------------------|------------|
-| Random Agent        | 0.4%     | NA         | NA             | ❌                  | ❌         |
-| Frequency-Informed  | 5.3%     | NA         | NA             | ❌                  | ❌         |
+| Random Agent        | 0.2%     | NA         | NA             | ❌                  | ❌         |
+| Frequency-Informed  | 3.7%     | NA         | NA             | ❌                  | ❌         |
 | CANINE (Google)     | 54.5%    | ~121M      | ~5.3M          | ❌                  | ✅         |
 | **Transformer (Ours)** | **55.4%** | **~1.2M**  | **~2.4M**      | ✅ (via decoder)     | ❌         |
 
